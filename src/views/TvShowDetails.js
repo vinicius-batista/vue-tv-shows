@@ -59,6 +59,14 @@ export default {
             <span class="body-2">Website:</span>
             <a class="body-1" href={this.show.officialSite}>{this.show.officialSite}</a>
           </div>
+          <v-btn
+            onClick={() => this.$router.push('/')}
+            round
+            small
+            color="grey lighten-2"
+          >
+            Back
+          </v-btn>
         </v-flex>
       </v-layout>
     )
