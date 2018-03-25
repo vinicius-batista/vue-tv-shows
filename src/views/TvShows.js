@@ -1,6 +1,7 @@
 import TvShowsForm from '@/components/TvShowsForm'
 import TvShowsList from '@/components/TvShowsList'
 import { searchShows } from '@/services/search'
+import { map, filter, compose, prop, propIs } from 'ramda'
 
 export default {
   name: 'TvShows',
@@ -15,7 +16,13 @@ export default {
     async sendHandler () {
       this.loading = true
       const { data } = await searchShows(this.search)
-      this.shows = data.map((item) => item.show)
+
+      const mapShowAndFilterWithoutImage = compose(
+        filter(propIs(Object, 'image')),
+        map(prop('show'))
+      )
+      this.shows = mapShowAndFilterWithoutImage(data)
+
       this.loading = false
     },
     inputHandler (value) {
