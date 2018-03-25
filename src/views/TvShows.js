@@ -2,9 +2,11 @@ import TvShowsForm from '@/components/TvShowsForm'
 import TvShowsList from '@/components/TvShowsList'
 import { searchShows } from '@/services/search'
 import { map, filter, compose, prop, propIs } from 'ramda'
+import renderLoading from '@/mixins/renderLoading'
 
 export default {
   name: 'TvShows',
+  mixins: [renderLoading],
   data () {
     return {
       search: '',
@@ -27,16 +29,6 @@ export default {
     },
     inputHandler (value) {
       this.search = value
-    },
-    renderLoading () {
-      return (
-        <v-layout
-          class="mt-5"
-          justify-center
-        >
-          <v-progress-circular indeterminate></v-progress-circular>
-        </ v-layout>
-      )
     }
   },
   render () {
