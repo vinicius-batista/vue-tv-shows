@@ -1,0 +1,10 @@
+.show-card {
+  margin: 1em 0em 1em 0em;
+  background-position: center;
+
+  .show-media {
+    height: 500px;
+    min-height: 500px;
+    image-orientation: flip;
+  }
+}

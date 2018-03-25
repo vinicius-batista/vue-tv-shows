@@ -1,4 +1,5 @@
 import TvShowsForm from '@/components/TvShowsForm'
+import TvShowsList from '@/components/TvShowsList'
 import { searchShows } from '@/services/search'
 
 export default {
@@ -19,6 +20,16 @@ export default {
     },
     inputHandler (value) {
       this.search = value
+    },
+    renderLoading () {
+      return (
+        <v-layout
+          class="mt-5"
+          justify-center
+        >
+          <v-progress-circular indeterminate></v-progress-circular>
+        </ v-layout>
+      )
     }
   },
   render () {
@@ -38,16 +49,11 @@ export default {
             />
           </v-flex>
         </v-layout>
-        <v-layout
-          class="mt-5"
-          justify-center
-        >
-          {
-            this.loading
-              ? <v-progress-circular indeterminate></v-progress-circular>
-              : <div></div>
-          }
-        </v-layout>
+        {
+          this.loading
+            ? this.renderLoading()
+            : <TvShowsList shows={this.shows}/>
+        }
       </div>
     )
   }

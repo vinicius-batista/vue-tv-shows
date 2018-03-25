@@ -1,7 +1,7 @@
 export default {
   functional: true,
   name: 'TvShowsForm',
-  render (h, { props, listeners }) {
+  render (h, { listeners }) {
     return (
       <v-text-field
         class="input-form"
