@@ -42,9 +42,10 @@ export default {
           <div class="body-1" domPropsInnerHTML={this.show.summary}></div>
           <div class="body-2">
             <span>Genres:</span>
-            {map((genre) => (
-              <v-chip>{genre}</v-chip>
-            ), this.show.genres)}
+            {map(
+              (genre, i) => (<v-chip key={i}>{genre}</v-chip>),
+              this.show.genres
+            )}
           </div>
           <div>
             <span class="body-2">Release date:</span>

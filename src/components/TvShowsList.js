@@ -1,7 +1,11 @@
 import { splitEvery, map } from 'ramda'
 
-const renderRows = (h) => (shows) => (
-  <v-layout justify-space-around wrap>
+const renderRows = (h) => (shows, i) => (
+  <v-layout
+    justify-space-around
+    wrap
+    key={i}
+  >
     {map(renderCard(h), shows)}
   </v-layout>
 )
