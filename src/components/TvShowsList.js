@@ -36,7 +36,8 @@ export default {
   name: 'TvShowsList',
   props: {
     shows: {
-      type: Array
+      type: Array,
+      default: []
     }
   },
   render (h, { props }) {

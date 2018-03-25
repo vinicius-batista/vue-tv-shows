@@ -48,7 +48,7 @@ export default {
         >
           <v-flex
             xs12
-            lg6
+            md6
           >
             <TvShowsForm
               onSend={this.sendHandler}
