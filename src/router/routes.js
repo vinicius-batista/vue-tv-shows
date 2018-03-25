@@ -10,5 +10,10 @@ export default [
     path: '/tv-shows',
     name: 'tv-shows',
     component: importView('TvShows')
+  },
+  {
+    path: '/tv-show/:id',
+    name: 'tv-show-details',
+    component: importView('TvShowDetails')
   }
 ]

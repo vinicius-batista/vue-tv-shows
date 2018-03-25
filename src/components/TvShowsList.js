@@ -15,7 +15,7 @@ const renderCard = (h) => (show) => (
   >
     <v-card
       class="show-card"
-      to={`tv-shows/${show.id}`}
+      to={`tv-show/${show.id}`}
       heigth="500px"
       width="300px"
     >
