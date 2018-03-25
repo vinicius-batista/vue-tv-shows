@@ -20,10 +20,13 @@ const renderCard = (h) => (show) => (
       width="300px"
     >
       <v-card-media
-        class="white--text show-media"
+        class="show-media"
         src={show.image && show.image.original}
       >
       </v-card-media>
+      <v-card-title primary-title>
+        {show.name}
+      </v-card-title>
     </v-card>
   </v-flex>
 )
