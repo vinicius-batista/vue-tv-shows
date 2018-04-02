@@ -6,12 +6,12 @@ export default {
       <v-toolbar
         app
         fixed
-        color="indigo"
+        color='indigo'
         dark
       >
-        <v-spacer></v-spacer>
+        <v-spacer />
         <v-toolbar-title>Vue TV Shows</v-toolbar-title>
-        <v-spacer></v-spacer>
+        <v-spacer />
       </v-toolbar>
     )
   }

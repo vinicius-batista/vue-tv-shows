@@ -9,10 +9,10 @@ export default {
     return (
       <form onSubmit={onSubmit}>
         <v-text-field
-          class="input-form"
+          class='input-form'
           solo
-          label="Search"
-          append-icon="search"
+          label='Search'
+          append-icon='search'
           append-icon-cb={listeners.send}
           onInput={listeners.input}
         />

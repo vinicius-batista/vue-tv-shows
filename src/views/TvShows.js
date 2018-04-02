@@ -35,7 +35,7 @@ export default {
     return (
       <div>
         <v-layout
-          class="mt-3"
+          class='mt-3'
           justify-center
         >
           <v-flex
@@ -51,7 +51,7 @@ export default {
         {
           this.loading
             ? this.renderLoading()
-            : <TvShowsList shows={this.shows}/>
+            : <TvShowsList shows={this.shows} />
         }
       </div>
     )

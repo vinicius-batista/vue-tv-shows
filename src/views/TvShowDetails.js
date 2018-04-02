@@ -28,22 +28,22 @@ export default {
     },
     renderContent () {
       return (
-        <v-layout wrap row class="show-details">
+        <v-layout wrap row class='show-details'>
           <v-flex
             sm5
             offset-sm1
             md2
             offset-md2
           >
-            <img src={this.show.image.original}/>
+            <img src={this.show.image.original} />
           </v-flex>
           <v-flex
             sm5
             md6
           >
-            <div class="headline">{this.show.name}</div>
-            <div class="body-1" domPropsInnerHTML={this.show.summary}></div>
-            <div class="body-2">
+            <div class='headline'>{this.show.name}</div>
+            <div class='body-1' domPropsInnerHTML={this.show.summary} />
+            <div class='body-2'>
               <span>Genres:</span>
               {map(
                 (genre, i) => (<v-chip key={i}>{genre}</v-chip>),
@@ -51,22 +51,22 @@ export default {
               )}
             </div>
             <div>
-              <span class="body-2">Release date:</span>
-              <span class="body-1">{this.formatDate(this.show.premiered)}</span>
+              <span class='body-2'>Release date:</span>
+              <span class='body-1'>{this.formatDate(this.show.premiered)}</span>
             </div>
             <div>
-              <span class="body-2">Rating:</span>
-              <span class="body-1">{this.show.rating.average}</span>
+              <span class='body-2'>Rating:</span>
+              <span class='body-1'>{this.show.rating.average}</span>
             </div>
             <div>
-              <span class="body-2">Website:</span>
-              <a class="body-1" href={this.show.officialSite}>{this.show.officialSite}</a>
+              <span class='body-2'>Website:</span>
+              <a class='body-1' href={this.show.officialSite}>{this.show.officialSite}</a>
             </div>
             <v-btn
               onClick={() => this.$router.push('/')}
               round
               small
-              color="grey lighten-2"
+              color='grey lighten-2'
             >
                 Back
             </v-btn>

@@ -3,11 +3,11 @@ export default {
     renderLoading () {
       return (
         <v-layout
-          class="mt-5"
+          class='mt-5'
           justify-center
         >
-          <v-progress-circular indeterminate></v-progress-circular>
-        </ v-layout>
+          <v-progress-circular indeterminate />
+        </v-layout>
       )
     }
   }

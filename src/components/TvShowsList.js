@@ -18,16 +18,15 @@ const renderCard = (h) => (show) => (
     key={show.id}
   >
     <v-card
-      class="show-card"
+      class='show-card'
       to={`tv-show/${show.id}`}
-      heigth="500px"
-      width="300px"
+      heigth='500px'
+      width='300px'
     >
       <v-card-media
-        class="show-media"
+        class='show-media'
         src={show.image && show.image.original}
-      >
-      </v-card-media>
+      />
       <v-card-title primary-title>
         {show.name}
       </v-card-title>
@@ -48,7 +47,7 @@ export default {
     const { shows } = props
     const showsSplited = splitEvery(3, shows)
     return (
-      <div class="mt-5">
+      <div class='mt-5'>
         {map(renderRows(h), showsSplited)}
       </div>
     )
