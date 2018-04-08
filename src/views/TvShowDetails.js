@@ -10,12 +10,10 @@ export default {
     this.show = data
     this.loading = false
   },
-  data () {
-    return {
-      show: null,
-      loading: true
-    }
-  },
+  data: () => ({
+    show: null,
+    loading: true
+  }),
   computed: {
     id () {
       return this.$route.params.id

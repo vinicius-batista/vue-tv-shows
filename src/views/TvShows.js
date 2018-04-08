@@ -7,13 +7,11 @@ import renderLoading from '@/mixins/renderLoading'
 export default {
   name: 'TvShows',
   mixins: [renderLoading],
-  data () {
-    return {
-      search: '',
-      shows: [],
-      loading: false
-    }
-  },
+  data: () => ({
+    search: '',
+    shows: [],
+    loading: false
+  }),
   methods: {
     async sendHandler () {
       this.loading = true
